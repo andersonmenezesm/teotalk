@@ -1,8 +1,0 @@
-{
-  "name": "teotalk",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/andersonmenezesm/teotalk.git",
-  "author": "Anderson Menezes <anderson.stifip@gmail.com>",
-  "license": "MIT"
-}

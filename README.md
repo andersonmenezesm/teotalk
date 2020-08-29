@@ -1,2 +1,0 @@
-# teotalk
-Teotalk Podcast
