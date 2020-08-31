@@ -12,7 +12,7 @@ export default class CreatePodcasts1598759467455 implements MigrationInterface {
             type: 'varchar',
             isPrimary: true,
             generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
+            //default: 'uuid_generate_v4()'
           },
           {
             name: 'title',
