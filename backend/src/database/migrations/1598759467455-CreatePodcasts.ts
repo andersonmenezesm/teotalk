@@ -9,10 +9,10 @@ export default class CreatePodcasts1598759467455 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'varchar',
+            type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
-            //default: 'uuid_generate_v4()'
+            default: 'uuid_generate_v4()'
           },
           {
             name: 'title',
@@ -37,7 +37,7 @@ export default class CreatePodcasts1598759467455 implements MigrationInterface {
           {
             name: 'avatar',
             type: 'varchar',
-            isNullable: false,
+            isNullable: true,
           },
         ],
       }),
