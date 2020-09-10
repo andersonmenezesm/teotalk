@@ -1,11 +1,18 @@
-import { Router} from 'express';
+import {  Router } from 'express';
 import CreatePodcastService from '../services/CreatePodcastService';
 import DeletePodcastService from '../services/DeletePodcastService';
-
-
+import { getRepository } from 'typeorm';
+import Podcast from '../models/podcasts';
 
 const podcastsRouter = Router();
 
+podcastsRouter.get('/', async (request, response) => {
+  const podcastRepository = getRepository(Podcast);
+
+  const podcast = await podcastRepository.find();
+
+  return response.json(podcast);
+})
 
 podcastsRouter.post('/' ,async (request, response) => {
   const { title, description, audiofile, avatar } = request.body;
