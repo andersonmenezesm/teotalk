@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm';
 
 @Entity('podcasts')
 class Podcast {
@@ -11,7 +11,7 @@ class Podcast {
   @Column()
   description: string;
 
-  @Column('time with time zone')
+  @CreateDateColumn()
   date: Date;
 
   @Column()

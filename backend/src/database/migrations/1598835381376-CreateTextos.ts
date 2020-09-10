@@ -36,8 +36,8 @@ export class CreateTextos1598835381376 implements MigrationInterface {
           },
           {
             name: 'date',
-            type: 'timestamp with time zone',
-            isNullable: false,
+            type: 'timestamp',
+            default: 'now()',
           },
           {
             name: 'secondauthor',

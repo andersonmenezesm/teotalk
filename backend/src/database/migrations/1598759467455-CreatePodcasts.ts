@@ -26,8 +26,8 @@ export default class CreatePodcasts1598759467455 implements MigrationInterface {
           },
           {
             name: 'date',
-            type: 'timestamp with time zone',
-            isNullable: false,
+            type: 'timestamp',
+            default: 'now()',
           },
           {
             name: 'audiofile',
