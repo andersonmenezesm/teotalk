@@ -1,16 +1,11 @@
 import { Router} from 'express';
-import { getCustomRepository } from 'typeorm';
 import CreatePodcastService from '../services/CreatePodcastService';
+import DeletePodcastService from '../services/DeletePodcastService';
+
 
 
 const podcastsRouter = Router();
 
-podcastsRouter.get('/', async (request, response) => {
-
-  const resposta = getCustomRepository;
-
-  return response.json(resposta);
-});
 
 podcastsRouter.post('/' ,async (request, response) => {
   const { title, description, audiofile, avatar } = request.body;
@@ -27,6 +22,15 @@ podcastsRouter.post('/' ,async (request, response) => {
   return response.json(podcast);
 });
 
+podcastsRouter.delete('/:id', async (request, response) => {
+  const { id } = request.params;
+
+  const deletePodcast = new DeletePodcastService();
+
+  await deletePodcast.execute(id);
+
+  return response.status(204).send();
+} )
 
 
 export default podcastsRouter;
