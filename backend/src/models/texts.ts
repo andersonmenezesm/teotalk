@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn,CreateDateColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn,CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('texts')
 class Text {
@@ -17,11 +17,20 @@ class Text {
   @Column()
   content: string;
 
+  @Column()
+  avatar: string;
+
+  @Column()
+  text: string;
+
   @CreateDateColumn()
   date: Date;
 
   @Column()
   secondauthor: string;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }
 
 export default Text;

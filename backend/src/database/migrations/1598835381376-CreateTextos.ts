@@ -30,6 +30,11 @@ export class CreateTextos1598835381376 implements MigrationInterface {
             isNullable: false,
           },
           {
+            name: 'secondauthor',
+            type: 'varchar',
+            isNullable: true,
+          },
+          {
             name: 'content',
             type: 'text',
             isNullable: false,
@@ -40,10 +45,20 @@ export class CreateTextos1598835381376 implements MigrationInterface {
             default: 'now()',
           },
           {
-            name: 'secondauthor',
+            name: 'updated_at',
+            type: 'timestamp',
+            default: 'now()',
+          },
+          {
+            name: 'text',
+            type: 'text',
+            isNullable: true,
+          },
+          {
+            name: 'avatar',
             type: 'varchar',
             isNullable: true,
-          }
+          },
         ]
       })
     )
