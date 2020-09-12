@@ -1,2 +1,0 @@
-# Teotalk
-## Podcast Theology 
